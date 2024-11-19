@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+ *, *::after, *::before {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+--Orange: hsl(26, 100%, 55%);
+--Pale-orange: hsl(25, 100%, 94%);
+--Very-dark-blue: hsl(220, 13%, 13%);
+--Dark-grayish-blue: hsl(219, 9%, 45%);
+--Grayish-blue: hsl(220, 14%, 75%);
+--Light-grayish-blue: hsl(223, 64%, 98%);
+--White: hsl(0, 0%, 100%);
+--Black-with-opacity: hsl(0, 0%, 0%, 0.75);
+}
+
+html {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-grayish-blue);
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+}
+
+.container {
+    max-width: 1120px;
+    min-height: 100vh;
+    padding: 0 5px;
+    margin: auto;
+}
+/* nav bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 26px;
+    border-bottom: 1px soolid var(--Grayish-blue);
+    margin-bottom: 85px;
+}
+
+.nav-first .menu-icon {
+    display: none;
+}
+
+.nav-first .backdrop {
+    display: none;
+}
+
+.nav-links .close-icon {
+    display: none ;
+}
+
+.nav-first {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-bottom: 30px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a:hover {
+color: var(--black);
+}
+
+.nav-links a:hover:after {
+    content: "";
+    position: absolute;
+    background-color: var(--Orange);
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -47px;
+}
+
+.nav-second {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding-bottom: 30px;
+}
+
+.avatar img {
+    height: 50px;
+    width: 50px;
+}
+
+.logo img {
+    height: 22px;
+}
+
+/* main */
+.main {
+display: flex;
+gap: 125px;
+min-height: 570px;
+align-items: center;
+padding: 0 50px;
+}
+
+/* gallery */
+.gallery {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.gallery .main-img img {
+    display: none;
+}
+
+.gallery .main-img img.active {
+    display: inline-block;
+    max-width: 445px;
+    max-height: 445px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.gallery .thumb-list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 445px;
+    width: 100%;
+}
+
+.gallery .thumb-list div {
+max-width: 90px;
+max-height: 90px;
+margin: 0 2px;
+}
+
+.gallery .thumb-list img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gallery .thumb-list img:hover{
+    opacity: 50%;
+}
+
+.gallery .thumb-list .active img{
+    opacity: 30%;
+}
+
+.gallery .thumb-list .active {
+    border: 2px solid var(--Orange);
+    border-radius: 13px;
+    margin: 0;
+
+}
+/* content */
+.content {
+    flex: 1;
+}
+
+/* mobile responsive */
+@media (max-width: 755px) {
+    .navbar {
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+
+    .nav-first, .nav-second {
+        gap: 30px;
+        padding-bottom: 10px;
+    }
+
+    .nav-first .menu-icon {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background: var(--White);
+        top: 0;
+        left: -5px;
+        max-width: 220px;
+        width: 100%;
+        height: 100vh;
+        align-items: start;
+        z-index: 15;
+        padding: 25px 30px;
+    }
+
+    .nav-first .backdrop.active {
+        background: var(--Black-with-opacity);
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        z-index: 14;
+    }
+
+    .nav-links.active .close-icon {
+        display: inline-block;
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+
+    .nav-links.active a {
+        font-weight: 700;
+        color: black;
+    }
+
+    .nav-links.active a:hover::after {
+        bottom: -5px;
+    }
+    
+}
