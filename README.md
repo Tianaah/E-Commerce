@@ -41,7 +41,7 @@ Users can:
 ### Screenshot
 
 ![Screenshot of E-commerce Product Page]
-![alt text](https://vscode.dev/github/Tianaah/E-Commerce/blob/main/images/Screenshot.jpg)
+![alt text](./images/Screenshot.jpg)
 
 ### Links
 
