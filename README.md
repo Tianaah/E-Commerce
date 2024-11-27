@@ -40,7 +40,7 @@ Users can:
 
 ### Screenshot
 
-![Screenshot of E-commerce Product Page] (./screenshot.jpg)
+![Screenshot of E-commerce Product Page] (./images/screenshot.jpg)
 
 **Note**: Replace the placeholder screenshot path with the actual screenshot from your project.
 
