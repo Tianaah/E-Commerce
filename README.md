@@ -40,9 +40,8 @@ Users can:
 
 ### Screenshot
 
-![Screenshot of E-commerce Product Page] (./images/screenshot.jpg)
-
-**Note**: Replace the placeholder screenshot path with the actual screenshot from your project.
+![Screenshot of E-commerce Product Page]
+![alt text](https://vscode.dev/github/Tianaah/E-Commerce/blob/main/images/Screenshot.jpg)
 
 ### Links
 
