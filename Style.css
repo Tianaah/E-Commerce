@@ -384,16 +384,22 @@ body {
   gap: 25px;
 }
 
+/* Cart Items Empty State */
 .cart .cart-items.empty {
   align-items: center;
   justify-content: center;
   height: 185px;
-  font: 700;
+  font-weight: 700;
+}
+
+/* Hide empty state when there are items in the cart */
+.cart .cart-items .cart-empty {
+  display: none; /* Hide text when there are items */
 }
 
 .cart .cart-items.empty .cart-empty {
   color: var(--grayish-blue);
-  display: none;
+  display: inline-block;
 }
 
 .checkout {
@@ -446,6 +452,12 @@ body {
 .cart-item .total-price {
   color: var(--black);
   font-weight: 700;
+}
+
+.delete-item {
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .cart-item.empty {
@@ -584,7 +596,7 @@ body {
     margin: 0;
   }
 
-  .add-to-cart {
+  .add-to-cart-container {
     flex-direction: column;
   }
 
